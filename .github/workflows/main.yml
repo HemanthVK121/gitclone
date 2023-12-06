@@ -18,4 +18,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: composer install
+          script: |
+             cd /home/ubuntu/laravel/gitclone  
+             composer install
